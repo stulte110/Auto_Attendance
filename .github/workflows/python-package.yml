@@ -30,10 +30,10 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run app
         env:
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          eai_sess: ${{ secrets.EAI_SESS }}
-          UUkey: ${{ secrets.UUKEY }}
+          username: ${{ secrets.USERNAME }};${{ secrets.USERNAME1 }}
+          password: ${{ secrets.PASSWORD }};${{ secrets.PASSWORD1 }}
+          eai_sess: ${{ secrets.EAI_SESS }};${{ secrets.EAI_SESS1 }}
+          UUkey: ${{ secrets.UUKEY }};${{ secrets.UUKEY1 }}
         run: |
           python3 auto.py --username=$username --password=$password --eai-sess=$eai_sess --UUkey=$UUkey
           python3 auto.py --username=$username1 --password=$password1 --eai-sess=$eai_sess1 --UUkey=$UUkey1
