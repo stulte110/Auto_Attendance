@@ -35,8 +35,8 @@ class DaKa(object):
         self.cookie1 = res1.headers['Set-Cookie'].split(";")[0]
         header1 = {'Cookie': self.cookie1}
         data = {
-            "userName": self.username1,
-            "passWord": self.password1,
+            "userName1": self.username1,
+            "passWord1": self.password1,
             "enter": 'true',
         }
         res2 = self.sess.post(url=self.login_url, headers=header1, data=data, allow_redirects=False)
