@@ -14,7 +14,7 @@ from halo import Halo
 
 
 class DaKa(object):
-    def __init__(self, username, password, eai_sess, UUkey):
+    def __init__(self, username1, password1, eai_sess1, UUkey1):
         self.username = username1
         self.password = password1
         self.login_url = "http://ca.its.csu.edu.cn/home/login/215"
@@ -81,12 +81,12 @@ class DaKa(object):
         return json.loads(res.text)
 
 
-def main(username, password, eai_sess, UUkey):
+def main(username1, password1, eai_sess1, UUkey1):
     print("\n[Time] %s" % datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     print("🚌 打卡任务启动")
     spinner = Halo(text='Loading', spinner='dots')
     spinner.start('正在新建打卡实例...')
-    dk = DaKa(username, password, eai_sess, UUkey)
+    dk = DaKa(username1, password1, eai_sess1, UUkey1)
     spinner.succeed('已新建打卡实例')
 
     spinner.start(text='登录到中南大学信息门户...')
@@ -107,10 +107,10 @@ def main(username, password, eai_sess, UUkey):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='manual to this script')
-    parser.add_argument('--username', type=str, default=None)
-    parser.add_argument('--password', type=str, default=None)
-    parser.add_argument('--eai-sess', type=str, default=None)
-    parser.add_argument('--UUkey', type=str, default=None)
+    parser.add_argument('--username1', type=str, default=None)
+    parser.add_argument('--password1', type=str, default=None)
+    parser.add_argument('--eai-sess1', type=str, default=None)
+    parser.add_argument('--UUkey1', type=str, default=None)
     args = parser.parse_args()
     print("用户信息：", args)
-    main(args.username, args.password, args.eai_sess, args.UUkey)
+    main(args.username1, args.password1, args.eai_sess1, args.UUkey1)
