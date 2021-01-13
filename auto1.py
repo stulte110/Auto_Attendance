@@ -107,10 +107,10 @@ def main(username1, password1, eai_sess1, UUkey1):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='manual to this script')
-    parser.add_argument('--username1', type=str, default=None)
-    parser.add_argument('--password1', type=str, default=None)
-    parser.add_argument('--eai-sess1', type=str, default=None)
-    parser.add_argument('--UUkey1', type=str, default=None)
+    parser.add_argument('--username', type=str, default=None)
+    parser.add_argument('--password', type=str, default=None)
+    parser.add_argument('--eai-sess', type=str, default=None)
+    parser.add_argument('--UUkey', type=str, default=None)
     args = parser.parse_args()
     print("用户信息：", args)
     main(args.username1, args.password1, args.eai_sess1, args.UUkey1)
