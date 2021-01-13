@@ -15,14 +15,14 @@ from halo import Halo
 
 class DaKa(object):
     def __init__(self, username1, password1, eai_sess1, UUkey1):
-        self.username = username1
-        self.password = password1
+        self.username1 = username1
+        self.password1 = password1
         self.login_url = "http://ca.its.csu.edu.cn/home/login/215"
         self.redirect_url = "http://ca.its.csu.edu.cn/SysInfo/SsoService/215"
         self.base_url = "https://wxxy.csu.edu.cn/ncov/wap/default/index"
         self.save_url = "https://wxxy.csu.edu.cn/ncov/wap/default/save"
-        self.eai_sess = eai_sess1
-        self.UUkey = UUkey1
+        self.eai_sess1 = eai_sess1
+        self.UUkey1 = UUkey1
         self.cookie1 = None
         self.cookie2 = None
         self.header = None
@@ -35,8 +35,8 @@ class DaKa(object):
         self.cookie1 = res1.headers['Set-Cookie'].split(";")[0]
         header1 = {'Cookie': self.cookie1}
         data = {
-            "userName": self.username,
-            "passWord": self.password,
+            "userName": self.username1,
+            "passWord": self.password1,
             "enter": 'true',
         }
         res2 = self.sess.post(url=self.login_url, headers=header1, data=data, allow_redirects=False)
@@ -107,10 +107,10 @@ def main(username1, password1, eai_sess1, UUkey1):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='manual to this script')
-    parser.add_argument('--username', type=str, default=None)
-    parser.add_argument('--password', type=str, default=None)
-    parser.add_argument('--eai-sess', type=str, default=None)
-    parser.add_argument('--UUkey', type=str, default=None)
+    parser.add_argument('--username1', type=str, default=None)
+    parser.add_argument('--password1', type=str, default=None)
+    parser.add_argument('--eai-sess1', type=str, default=None)
+    parser.add_argument('--UUkey1', type=str, default=None)
     args = parser.parse_args()
     print("用户信息：", args)
     main(args.username1, args.password1, args.eai_sess1, args.UUkey1)
