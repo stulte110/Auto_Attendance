@@ -42,7 +42,7 @@ class DaKa(object):
         res2 = self.sess.post(url=self.login_url, headers=header1, data=data, allow_redirects=False)
         self.cookie2 = res2.headers['Set-Cookie'].split(";")[0]
         self.header = {
-            'Cookie': "eai-sess=" + self.eai_sess + ";" + "UUkey=" + self.UUkey + ";" + self.cookie1 + ";" + self.cookie2}
+            'Cookie': "eai-sess1=" + self.eai_sess1 + ";" + "UUkey1=" + self.UUkey1 + ";" + self.cookie1 + ";" + self.cookie2}
         return self.sess
 
     def get_info(self, html=None):
