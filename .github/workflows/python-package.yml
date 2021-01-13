@@ -43,4 +43,4 @@ jobs:
           eai_sess: ${{ secrets.EAI_SESS1 }}
           UUkey: ${{ secrets.UUKEY1 }}        
         run: |
-          python3 auto.py --username=$username1 --password=$password1 --eai-sess=$eai_sess1 --UUkey=$UUkey1
+          python3 auto1.py --username=$username1 --password=$password1 --eai-sess=$eai_sess1 --UUkey=$UUkey1
