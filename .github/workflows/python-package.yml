@@ -42,7 +42,12 @@ jobs:
           password2: ${{ secrets.PASSWORD2 }}
           eai_sess2: ${{ secrets.EAI_SESS2 }}
           UUkey2: ${{ secrets.UUKEY2 }}
+          username3: ${{ secrets.USERNAME3 }}
+          password3: ${{ secrets.PASSWORD3 }}
+          eai_sess3: ${{ secrets.EAI_SESS3 }}
+          UUkey3: ${{ secrets.UUKEY3 }}
         run: |
           python3 auto.py --username=$username --password=$password --eai-sess=$eai_sess --UUkey=$UUkey
           python3 auto.py --username=$username1 --password=$password1 --eai-sess=$eai_sess1 --UUkey=$UUkey1
           python3 auto.py --username=$username2 --password=$password2 --eai-sess=$eai_sess2 --UUkey=$UUkey2
+          python3 auto.py --username=$username3 --password=$password3 --eai-sess=$eai_sess3 --UUkey=$UUkey3
