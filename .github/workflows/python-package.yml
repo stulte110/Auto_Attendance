@@ -50,4 +50,5 @@ jobs:
           python3 auto.py --username=$username --password=$password --eai-sess=$eai_sess --UUkey=$UUkey
           python3 auto.py --username=$username1 --password=$password1 --eai-sess=$eai_sess1 --UUkey=$UUkey1
           python3 auto.py --username=$username2 --password=$password2 --eai-sess=$eai_sess2 --UUkey=$UUkey2
-          python3 auto.py --username=$username3 --password=$password3 --eai-sess=$eai_sess3 --UUkey=$UUkey3
+          python3 auto.py --username=$username3 --password=$password3 --eai-sess=$eai_sess3 --UUkey=$UUkey3          
+          python3 auto.py --username=$username4 --password=$password4 --eai-sess=$eai_sess4 --UUkey=$UUkey4
