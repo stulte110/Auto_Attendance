@@ -34,6 +34,7 @@ class DaKa(object):
 
         self.header = {
             'Cookie': "eai-sess=" + self.eai_sess + ";" + "UUkey=" + self.UUkey
+        }
         return self.sess
 
     def get_info(self, html=None):
