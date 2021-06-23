@@ -34,31 +34,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           eai_sess: ${{ secrets.EAI_SESS }}
           UUkey: ${{ secrets.UUKEY }}
-          username1: ${{ secrets.USERNAME1 }}
-          password1: ${{ secrets.PASSWORD1 }}
-          eai_sess1: ${{ secrets.EAI_SESS1 }}
-          UUkey1: ${{ secrets.UUKEY1 }}
-          username2: ${{ secrets.USERNAME2 }}
-          password2: ${{ secrets.PASSWORD2 }}
-          eai_sess2: ${{ secrets.EAI_SESS2 }}
-          UUkey2: ${{ secrets.UUKEY2 }}
-          username3: ${{ secrets.USERNAME3 }}
-          password3: ${{ secrets.PASSWORD3 }}
-          eai_sess3: ${{ secrets.EAI_SESS3 }}
-          UUkey3: ${{ secrets.UUKEY3 }}
-          username4: ${{ secrets.USERNAME4 }}
-          password4: ${{ secrets.PASSWORD4 }}
-          eai_sess4: ${{ secrets.EAI_SESS4 }}
-          UUkey4: ${{ secrets.UUKEY4 }}
-          username5: ${{ secrets.USERNAME5 }}
-          password5: ${{ secrets.PASSWORD5 }}
-          eai_sess5: ${{ secrets.EAI_SESS5 }}
-          UUkey5: ${{ secrets.UUKEY5 }}
         run: |
           python3 auto.py --username=$username --password=$password --eai-sess=$eai_sess --UUkey=$UUkey
-          python3 auto.py --username=$username1 --password=$password1 --eai-sess=$eai_sess1 --UUkey=$UUkey1
-          python3 auto.py --username=$username2 --password=$password2 --eai-sess=$eai_sess2 --UUkey=$UUkey2
-          python3 auto.py --username=$username3 --password=$password3 --eai-sess=$eai_sess3 --UUkey=$UUkey3          
-          python3 auto.py --username=$username4 --password=$password4 --eai-sess=$eai_sess4 --UUkey=$UUkey4
-          python3 auto.py --username=$username5 --password=$password5 --eai-sess=$eai_sess5 --UUkey=$UUkey5
+
 
